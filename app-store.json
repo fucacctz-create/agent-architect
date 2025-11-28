@@ -1,0 +1,91 @@
+{
+  "name": "agent-architect",
+  "displayName": "Agent Architect",
+  "version": "1.0.0",
+  "description": "Creates secure, deployable Next.js AI agents as standalone microservices for non-technical users",
+  "category": "AI & Machine Learning",
+  "subcategory": "Code Generation",
+  "pricing": "free",
+  "author": "Your Name",
+  "homepage": "https://agent-architect.vercel.app",
+  "repository": "https://github.com/yourusername/agent-architect",
+  "documentation": "https://agent-architect.vercel.app/docs",
+  "license": "Private",
+  "tags": [
+    "ai",
+    "agents",
+    "microservices",
+    "code-generation",
+    "next.js",
+    "claude",
+    "deployment",
+    "no-code"
+  ],
+  "apiEndpoint": "/api/agent",
+  "healthCheck": "/api/agent",
+  "methods": ["POST", "GET"],
+  "authentication": "none",
+  "rateLimit": "100/hour",
+  "environmentVariables": [
+    {
+      "name": "ANTHROPIC_API_KEY",
+      "description": "Anthropic API key for Claude AI (get from console.anthropic.com)",
+      "required": true,
+      "secret": true,
+      "example": "sk-ant-api03-..."
+    }
+  ],
+  "capabilities": [
+    "code-generation",
+    "ai-agents",
+    "microservices",
+    "deployment-automation",
+    "security-first",
+    "educational"
+  ],
+  "integration": {
+    "type": "rest-api",
+    "protocol": "https",
+    "format": "json",
+    "cors": "enabled",
+    "examples": [
+      {
+        "name": "Generate Agent",
+        "method": "POST",
+        "endpoint": "/api/agent",
+        "request": {
+          "input": "Create an agent that analyzes customer feedback"
+        },
+        "response": {
+          "result": "Complete agent package with all files..."
+        }
+      },
+      {
+        "name": "Health Check",
+        "method": "GET",
+        "endpoint": "/api/agent",
+        "response": {
+          "status": "healthy",
+          "service": "Agent Architect",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "deployment": {
+    "platform": "vercel",
+    "runtime": "nodejs18.x",
+    "buildCommand": "npm run build",
+    "startCommand": "npm start",
+    "framework": "nextjs"
+  },
+  "requirements": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "support": {
+    "documentation": "README.md",
+    "deployment": "DEPLOYMENT.md",
+    "issues": "https://github.com/yourusername/agent-architect/issues"
+  }
+}
